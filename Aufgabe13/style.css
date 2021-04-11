@@ -145,7 +145,7 @@ img, video{
     display: block;
     cursor: pointer; 
   }
-  input#absender,
+  input,
   textarea {
     width: 300px;
     border: 1px solid rgb(207, 207, 207);
