@@ -208,28 +208,28 @@ nav:before {
   
   @media screen and (max-width: 600px) {
       h1 {
-        width: 600px;
+        width: 300px;
         margin: 0;
         
 
       }
       h2{
-          width: 600px;
+          width: 300px;
           margin: 0%;
          
       }
       nav{
-          width: 600px;
+          width: 300px;
           margin: 0%;
           
       }
       p{
-          width: 600px;
+          width: 300px;
           margin: 0%;
           
       }
       .medien{
-          width: 600px;
+          width: 300px;
           margin: 0%;
           
       }
