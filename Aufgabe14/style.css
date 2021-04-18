@@ -272,28 +272,28 @@ nav:before {
   }
   @media screen and (max-width: 600px) {
     h1 {
-        width: 100%;
+        width: 300px;
         
         
 
       }
       h2{
-          width: 100%;
+          width: 300px;
          
          
       }
       nav, form{
-          width: 100%;
+          width: 300px;
           
           
       }
       p, ul{
-          width: 100%;
+          width: 300px;
           
           
       }
       .medien{
-          width: 100%;
+          width: 300px;
           
           
       }
