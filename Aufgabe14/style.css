@@ -206,20 +206,31 @@ nav:before {
       content: '<-';
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
       h1 {
-        width: 300px;
+        width: 600px;
+        margin: 0;
+        
+
       }
       h2{
-          width: 300px;
+          width: 600px;
+          margin: 0%;
+         
       }
       nav{
-          width: 300px;
+          width: 600px;
+          margin: 0%;
+          
       }
       p{
-          width: 300px;
+          width: 600px;
+          margin: 0%;
+          
       }
       .medien{
-          width: 300px;
+          width: 600px;
+          margin: 0%;
+          
       }
   }
