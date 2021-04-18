@@ -218,12 +218,12 @@ nav:before {
           margin: 0%;
          
       }
-      nav{
+      nav, form{
           width: 500px;
           margin: 0%;
           
       }
-      p{
+      p, ul{
           width: 500px;
           margin: 0%;
           
@@ -233,6 +233,10 @@ nav:before {
           margin: 0%;
           
       }
+
+      img, video{
+        width: 300px;
+    }
   }
 
   @media screen and (min-width: 1028px){
@@ -247,12 +251,12 @@ nav:before {
           margin: 0%;
          
       }
-      nav{
+      nav, form{
           width: 800px;
           margin: 0%;
           
       }
-      p{
+      p, ul{
           width: 800px;
           margin: 0%;
           
@@ -262,5 +266,42 @@ nav:before {
           margin: 0%;
           
       }
+
+    
+      
+  }
+  @media screen and (max-width: 600px) {
+    h1 {
+        width: 300px;
+        
+        
+
+      }
+      h2{
+          width: 300px;
+         
+         
+      }
+      nav, form{
+          width: 300px;
+          
+          
+      }
+      p, ul{
+          width: 300px;
+          
+          
+      }
+      .medien{
+          width: 300px;
+          
+          
+      }
+     img, video{
+         width: 200px;
+     }
+
+     
+      
       
   }
