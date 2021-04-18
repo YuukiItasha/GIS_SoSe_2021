@@ -3,6 +3,8 @@ body {
     width: 800px;
     margin: 0 auto;
     
+    flex-flow: row wrap;
+    
 
 }
 
@@ -19,6 +21,8 @@ h1 {
     margin: 0 auto;
    
     width: 800px;
+
+    flex: 1 10%;
    
 }
 
@@ -34,6 +38,8 @@ h2 {
     margin: 0 auto;
    
     width: 800px;
+
+    flex:  1 10%;
 
 
     
@@ -57,6 +63,8 @@ nav {
     text-align: right;
     position: sticky;
     top: 0;
+
+    
     
 
 }
@@ -82,11 +90,10 @@ p, ul{
     margin: 0 auto;
    
     width: 800px;
+
+    flex: 1 10%;
 }
 
-h3{
-    font-size: 20px;
-}
 
 
 
@@ -103,11 +110,14 @@ h3{
     margin: 0 auto;
    
     width: 800px;
+
+    flex: 1 10%;
   
 }
 
 img, video{
     margin: 5px;
+    flex: 1 10%;
 }
 
 #mich:hover {
@@ -156,6 +166,7 @@ img, video{
    
     width: 800px;
     text-align: center;
+    flex: 1 50%;
   }
   label { 
     display: block;
@@ -195,4 +206,20 @@ nav:before {
       content: '<-';
   }
   
- 
+  @media screen and (max-width: 768px) {
+      h1 {
+        width: 300px;
+      }
+      h2{
+          width: 300px;
+      }
+      nav{
+          width: 300px;
+      }
+      p{
+          width: 300px;
+      }
+      .medien{
+          width: 300px;
+      }
+  }
