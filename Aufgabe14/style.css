@@ -273,12 +273,19 @@ nav:before {
   @media screen and (max-width: 600px) {
     h1 {
         width: 300px;
+        display: flex ;
+
+
+       
         
         
 
       }
       h2{
           width: 300px;
+          
+
+          
          
          
       }
@@ -286,19 +293,23 @@ nav:before {
           width: 300px;
           
           
+          
       }
       p, ul{
           width: 300px;
           
           
+          
       }
       .medien{
           width: 300px;
+         
           
           
       }
      img, video{
          width: 200px;
+         
      }
 
      
