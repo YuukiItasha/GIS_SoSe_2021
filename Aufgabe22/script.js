@@ -201,43 +201,6 @@ context.fillStyle = "black";
 context.fill();
 context.stroke();
 // Aufgabe 3b
-/*
-class Rechteck {
-    x1: number;
-    y1: number;
-    x2: number;
-    y2: number;
-
-    maxWidth: number = 500;
-    maxHeight: number = 400;
-
-    constructor() {
-        this.x1 = this.getRandom(0, this.maxWidth);
-        this.y1 = this.getRandom(this.x1, this.maxWidth);
-        this.x2 = this.getRandom(0, this.maxHeight);
-        this.y2 = this.getRandom(this.y1, this.maxWidth);
-    }
-
-    getRandom(min: number, max: number): number {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    drawRect(): void {
-   
-        context.beginPath();
-        context.fillStyle = "purple";
-        context.fillRect(this.x1, this.y1, this.x2, this.y2);
-        context.fill();
-        context.closePath();
-        context.restore();
-
-        
-    }
-
-}
-*/
 class Rechteck {
     constructor() {
         this.maxWidth = 500;
