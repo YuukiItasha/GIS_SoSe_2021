@@ -14,14 +14,15 @@ console.log(x); */
 function min(..._input) {
     let minimum = _input[0];
     for (let i = 1; i < _input.length; i++) {
-        if (minimum > _input[i]) {
-            minimum = _input[i];
+        const sNr = _input[i];
+        if (sNr < minimum) {
+            minimum = sNr;
         }
     }
     return minimum;
 }
 // Test
-console.log(min(3, 5, 8, 1, 66));
+console.log("Kleinste Zahl ist " + min(3, 5, 8, 1, 66));
 // Aufgabe 1 b)
 /*
 function isEven(x: number): boolean {
@@ -37,16 +38,24 @@ console.log(isEven(-1)); // ungerade
 // Begründung für Ergebnis von -1: Bei Minus 1 kommt ungerade heraus
 // Grund hierfür: der Modulo kann auch Minus zahlen berechnen: hier -1%2 = -1, isEven sieht es dann als 1 an
 //Verbesserung Aufgabe 1 b)
-function isEven(_x) {
-    if (_x == 0)
+function isEven(nr) {
+    if (nr < 0) {
+        nr = 0 - nr; // Da eine Minus zahl nicht ausgegeben werden kann wird hier
+        // aus der Minus zahle eine Positive Zahl gemacht
+    }
+    if (nr == 0) {
         return true;
-    if (_x == 1)
+    }
+    else if (nr == 1) {
         return false;
-    let ergebnis = isEven(_x - 2);
-    return ergebnis;
+    }
+    else {
+        return isEven(nr - 2);
+    }
 }
 console.log(isEven(50)); // gerade 
 console.log(isEven(75)); // ungerade 
+console.log(isEven(-1)); // ungerade
 function creatStudent(_name, _studiengang, _alter) {
     let student = {
         name: _name, studiengang: _studiengang, alter: _alter
