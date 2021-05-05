@@ -16,14 +16,15 @@ console.log(x); */
 function min(..._input: number[]): number {
   let minimum: number = _input[0];
   for (let i: number = 1; i < _input.length; i++) {
-    if (minimum > _input[i]) {
-      minimum = _input[i];
+      const sNr: number = _input[i];
+      if (sNr < minimum) {
+      minimum = sNr;
     }
   }
   return minimum;
 }
 // Test
-console.log(min(3, 5, 8, 1, 66));
+console.log("Kleinste Zahl ist " + min(3, 5, 8, 1, 66));
 
 // Aufgabe 1 b)
 
@@ -44,18 +45,26 @@ console.log(isEven(-1)); // ungerade
 
 //Verbesserung Aufgabe 1 b)
 
-function isEven(_x: number): boolean {
-    if (_x == 0) return true;
-    if (_x == 1) return false;
-    let ergebnis: boolean = isEven(_x - 2);
-    return ergebnis;
-  }        
+function isEven(nr: number): boolean {
+       
+    if (nr < 0) {
+        nr = 0 - nr;     // Da eine Minus zahl nicht ausgegeben werden kann wird hier
+                        // aus der Minus zahle eine Positive Zahl gemacht
+    }
+
+    if (nr == 0) {      
+        return true; 
+    } else if (nr == 1) {
+        return false;  
+    } else {
+        return isEven(nr - 2);   
+    }
+    
+}      
   
 console.log(isEven(50)); // gerade 
-
 console.log(isEven(75)); // ungerade 
-
-// console.log(isEven(-1)); // gibt fehler da -1 nicht ausgegeben werden kann
+console.log(isEven(-1)); // ungerade
 
 // Aufgabe 1 c)
 
