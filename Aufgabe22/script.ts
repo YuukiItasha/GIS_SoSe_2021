@@ -1,19 +1,33 @@
 // Aufgabe 1 a)
-
+/*
 let y: number = Math.min(2, 4, 7, 9, 16, 1);
 console.log(y);
-
+*/
 
 // Aufgabe 1 a andere möglichkeit (bisschen ausgetestet)
-
+/*
 var a: number = 10, b: number = 20, c: number = 16, d: number = 45, e: number = 7;
 var x: number = Math.min(a, b, c, d, e);
 
-console.log(x); 
+console.log(x); */
+
+// Verbesserung 1a 
+
+function min(..._input: number[]): number {
+  let minimum: number = _input[0];
+  for (let i: number = 1; i < _input.length; i++) {
+    if (minimum > _input[i]) {
+      minimum = _input[i];
+    }
+  }
+  return minimum;
+}
+// Test
+console.log(min(3, 5, 8, 1, 66));
 
 // Aufgabe 1 b)
 
-
+/*
 function isEven(x: number): boolean {
     return x % 2 === 0;
   }        
@@ -23,10 +37,25 @@ console.log(isEven(50)); // gerade
 console.log(isEven(75)); // ungerade 
 
 console.log(isEven(-1)); // ungerade  
+*/
 
 // Begründung für Ergebnis von -1: Bei Minus 1 kommt ungerade heraus
 // Grund hierfür: der Modulo kann auch Minus zahlen berechnen: hier -1%2 = -1, isEven sieht es dann als 1 an
 
+//Verbesserung Aufgabe 1 b)
+
+function isEven(_x: number): boolean {
+    if (_x == 0) return true;
+    if (_x == 1) return false;
+    let ergebnis: boolean = isEven(_x - 2);
+    return ergebnis;
+  }        
+  
+console.log(isEven(50)); // gerade 
+
+console.log(isEven(75)); // ungerade 
+
+// console.log(isEven(-1)); // gibt fehler da -1 nicht ausgegeben werden kann
 
 // Aufgabe 1 c)
 
@@ -70,18 +99,22 @@ function showInfo(s: Student): void {
     console.log(s.studiengang);
     console.log(s.alter);
 }
-
+/*
 showInfo(s1);
 showInfo(s2);
 showInfo(s3);
-showInfo(studentArray[3]);
+showInfo(studentArray[3]); */
+
+for (let student of studentArray) {
+    showInfo(student);
+}
 
 // Aufgabe 2 a 
 
-function backwards(input: number []): number [] {
+function backwards(_input: number []): number [] {
         let barr: number[] = [];
-        for (let i = input.length - 1 ; i >= 0; i--) {
-            barr [i] = input[input.length - i - 1];
+        for (let i = _input.length - 1 ; i >= 0; i--) {
+            barr [i] = _input[_input.length - i - 1];
         }
         return barr;
     }
@@ -91,31 +124,31 @@ function backwards(input: number []): number [] {
 
 
 
-function join(...input: number[][]): number[] {
-    let zarray: number[] = [];
-    let varray: number = 0;
-    input.forEach(array => {
+function join(..._input: number[][]): number[] {
+    let backArray: number[] = [];
+    let vorArray: number = 0;
+    _input.forEach(array => {
         for (let i: number = 0; i < array.length; i++) {
-            zarray[varray] = array[i];
-            varray++;
+            backArray[vorArray] = array[i];
+            vorArray++;
         }
     });
-    return zarray;
+    return backArray;
 }
 
 // Aufgabe 2 c)
-function split(input: number[], number1: number, number2: number): number[] {
+function split(_input: number[], _number1: number, _number2: number): number[] {
 
     let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
  
     let index: number = 0;
-    for (let i: number = number1; i <= number2; i++) {
-        arr[index] = input[i];
+    for (let i: number = _number1; i <= _number2; i++) {
+        arr[index] = _input[i];
         i++;
     } 
     return arr;
 }
-// Aufgabe 
+// Aufgabe Testen
 let arr: number[] = [5, 42, 17, 2018, -10, 60, -10010];
 let arrBack: number[] = backwards(arr);
 console.log(arr);
@@ -278,10 +311,10 @@ class Rechteck {
         this.yy = this.getRandomInt(this.y, this.maxHeight);
     }
 
-    getRandomInt(min: number, max: number): number {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
+    getRandomInt(_min: number, _max: number): number {
+        _min = Math.ceil(_min);
+        _max = Math.floor(_max);
+        return Math.floor(Math.random() * (_max - _min)) + _min;
     }
 
     drawRect(): void {
