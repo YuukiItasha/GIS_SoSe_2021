@@ -38,7 +38,7 @@ function a2(): void {
     do {
         console.log(i);
         i = i - 1;
-    } while( i > 0);
+    } while ( i > 0);
 }
 a2();
 /*
@@ -60,7 +60,7 @@ function a3(): void { //a3 statt a2
     do {
         console.log(i); //x statt i
         i = i - 1;
-    } while( i > 0);
+    } while ( i > 0);
 } 
 a2();
 
@@ -82,15 +82,15 @@ console.log(x);         //gibt Hallo aus
 func4();                //gibt Blubb aus
 func5();                // gibt Test aus
 console.log(x);         // Hallo wird nicht ausgegeben da x als y überschrieben wurde unten
-function func3(y: string): void{ //x wird als y überschrieben und es wird ein Bla statt Hallo
+function func3(y: string): void { //x wird als y überschrieben und es wird ein Bla statt Hallo
     y = "Bla";
     console.log(y);
 }
-function func4(): void{ 
+function func4(): void { 
     let x: string = "Blubb";
     console.log(x);
 }
-function func5(): void{
+function func5(): void {
     x = "Test";
 } 
 
@@ -109,7 +109,7 @@ function func5(): void{
 //Aufgabe 5 a
 
 let c: number = multiply(5, 8);
-function multiply(_a: number, _b: number): number{
+function multiply(_a: number, _b: number): number {
     let result: number = _a * _b;
     return result;
   }
@@ -118,7 +118,7 @@ console.log(c);
 // Aufgabe 5b
 
  let d: number = max(10, 45);
-function max(_a: number, _b: number): number{
+function max(_a: number, _b: number): number {
     if ( _a > _b )
     return _a;
     else return _b;
@@ -181,14 +181,14 @@ function leapyears(): void {
 
 //Aufgabe 6a
 
-for (var hash = "#"; hash.length <= 7 ; hash += "#"){
+for (var hash = "#"; hash.length <= 7 ; hash += "#") {
     console.log(hash);
     
   } 
 
 //Aufgabe 6b & c
 
-function fizzBuzz(num){
+function fizzBuzz(num: number){
     
     if (num % 5 == 0 && num % 3 == 0) return "fizzbuzz";
     if (num % 5 == 0) return "fizz";
