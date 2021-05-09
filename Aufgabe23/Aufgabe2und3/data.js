@@ -5,6 +5,61 @@ var Aufgabe2und3;
     Aufgabe2und3.posibilityMitte = [];
     Aufgabe2und3.posibilityUnten = [];
     let path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1);
+    /*
+      interface ImagePart {
+          imageUrl: string;
+          position: string;
+  }
+  
+      interface FullImages {
+              imageId: string;
+              oben: ImagePart;
+              mitte: ImagePart;
+              unten: ImagePart;
+  }
+  
+      const data: FullImages[] = [
+      {
+          imageId: "asuna1",
+          oben: {
+              imageUrl: "Bilder/Oben/asuna1_oben.jpg"
+          }
+          mitte: {
+              imageUrl: "Bilder/Mitte/asuna1_mitte.jpg"
+          }
+          unten: {
+              imageUrl: "Bilder/Unten/asuna1_unten.jpg"
+          }
+  
+          imageId: "asuna2",
+          oben: {
+              imageUrl: "Bilder/Oben/asuna2_oben.jpg"
+          }
+          mitte: {
+              imageUrl: "Bilder/Mitte/asuna2_mitte.jpg"
+          }
+          unten: {
+              imageUrl: "Bilder/Unten/asuna2_unten.jpg"
+          }
+  
+          imageId: "asuna3",
+          oben: {
+              imageUrl: "Bilder/Oben/asuna3_oben.jpg"
+          }
+          mitte: {
+              imageUrl: "Bilder/Mitte/asuna3_mitte.jpg"
+          }
+          unten: {
+              imageUrl: "Bilder/Unten/asuna3_unten.jpg"
+          }
+      }
+  ];
+  
+  function displayPart(part: ImagePart, position: string): void {
+      const imageContainer: HTMLDivElement = <HTMLDivElement>document.getElementById("image-container");
+  
+      imageContainer.appendChild
+  } */
     let bild1Oben = new Aufgabe2und3.Posibility("asuna1 - Oben", 0, path + "Bilder/Oben/asuna1_oben.jpg");
     let bild1Mitte = new Aufgabe2und3.Posibility("asuna1 - Mitte", 1, path + "Bilder/Mitte/asuna1_mitte.jpg");
     let bild1Unten = new Aufgabe2und3.Posibility("asuna1 - Unten", 2, path + "Bilder/Unten/asuna1_unten.jpg");
