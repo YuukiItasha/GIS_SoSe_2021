@@ -8,14 +8,14 @@ var Aufgabe2und3;
     function loadContent() {
         if (path == "oben.html") {
             selected = Aufgabe2und3.selectedElements.oben;
-            addDetailWindow(posibilityOben);
+            addDetailWindow(Aufgabe2und3.posibilityOben);
         }
         else if (path == "mitte.html") {
-            addDetailWindow(posibilityMitte);
+            addDetailWindow(Aufgabe2und3.posibilityMitte);
         }
         else if (path == "unten.html") {
             selected = Aufgabe2und3.selectedElements.unten;
-            addDetailWindow(posibilityUnten);
+            addDetailWindow(Aufgabe2und3.posibilityUnten);
         }
     }
     function addDetailWindow(images) {
