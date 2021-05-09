@@ -7,27 +7,27 @@ var Aufgabe2und3;
             this.type = _type;
             this.link = _link;
             if (this.type == 0) {
-                posibilityOben.push(this);
+                Aufgabe2und3.posibilityOben.push(this);
             }
             else if (this.type == 1) {
-                posibilityMitte.push(this);
+                Aufgabe2und3.posibilityMitte.push(this);
             }
             else if (this.type == 2) {
-                posibilityUnten.push(this);
+                Aufgabe2und3.posibilityUnten.push(this);
             }
         }
     }
     Aufgabe2und3.Posibility = Posibility;
     let path = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
     if (path == "index.html" || path == "") {
-        let imageOben = document.getElementById("imgOben");
-        let imageMitte = document.getElementById("imgMitte");
-        let imageUnten = document.getElementById("imgUnten");
+        let bildOben = document.getElementById("bildOben");
+        let bildMitte = document.getElementById("bildMitte");
+        let bildUnten = document.getElementById("bildUnten");
         window.addEventListener("load", loadImages);
         function loadImages() {
-            imageOben.src = Aufgabe2und3.selectedElements.oben.link;
-            imageMitte.src = Aufgabe2und3.selectedElements.mitte.link;
-            imageUnten.src = Aufgabe2und3.selectedElements.unten.link;
+            bildOben.src = Aufgabe2und3.selectedElements.oben.link;
+            bildMitte.src = Aufgabe2und3.selectedElements.mitte.link;
+            bildUnten.src = Aufgabe2und3.selectedElements.unten.link;
             console.log(Aufgabe2und3.selectedElements);
         }
         let btEditOben = document.getElementById("btOben");
