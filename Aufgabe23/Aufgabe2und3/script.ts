@@ -20,23 +20,23 @@ namespace Aufgabe2und3 {
     }
 
     export interface Selected {
-        top: Posibility;
-        middle: Posibility;
-        bottom: Posibility;
+        oben: Posibility;
+        mitte: Posibility;
+        unten: Posibility;
     }
 
     let path: string = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1);
     if (path == "index.html" || path == "" ) {
-        let imageOben: HTMLImageElement = <HTMLImageElement>document.getElementById("imgOben");
-        let imageMitte: HTMLImageElement = <HTMLImageElement>document.getElementById("imgMitte");
-        let imageUnten: HTMLImageElement = <HTMLImageElement>document.getElementById("imgUnten");
+        let bildOben: HTMLImageElement = <HTMLImageElement>document.getElementById("bildOben");
+        let bildMitte: HTMLImageElement = <HTMLImageElement>document.getElementById("bildMitte");
+        let bildUnten: HTMLImageElement = <HTMLImageElement>document.getElementById("bildUnten");
 
         window.addEventListener("load", loadImages);
 
         function loadImages(): void {
-            imageOben.src = selectedElements.oben.link;
-            imageMitte.src = selectedElements.mitte.link;
-            imageUnten.src = selectedElements.unten.link;
+            bildOben.src = selectedElements.oben.link;
+            bildMitte.src = selectedElements.mitte.link;
+            bildUnten.src = selectedElements.unten.link;
             console.log(selectedElements);
         }
 
